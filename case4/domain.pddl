@@ -3,9 +3,9 @@
     
     (:functions
         (battery-amount ?drone)
-        (drill-left ?drone)
+        (drill-amount ?drone)
         (battery-capacity)
-        (drill-total)
+        (drill-capacity)
     )
     
     (:predicates
@@ -66,7 +66,7 @@
                 (not (is-in ?sample ?loc))
                 (carry ?drone ?sample)
                 (decrease (battery-amount ?drone) 3)
-                (increase (sample-amount ?drone) 1))
+                )
     )
     
     (:action drop-sample
@@ -119,13 +119,13 @@
         :precondition
 	        (and
 	            (drone ?drone)  
-	            (= (drill-left ?drone) 0)
+	            (= (drill-amount ?drone) 0)
                 (> (battery-amount ?drone) 4)
             )
 	            
         :effect
             (and
-                (increase (drill-left ?drone) (drill-total))
+                (increase (drill-amount ?drone) (drill-capacity))
                 (decrease (battery-amount ?drone) 4)
             )
     )
