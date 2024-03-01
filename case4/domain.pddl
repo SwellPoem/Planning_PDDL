@@ -11,7 +11,7 @@
     (:predicates
         (adj ?from-loc ?to-loc)                      
         (is-in ?sample ?loc)
-        (been-at ?drone ?loc)
+        ;(been-at ?drone ?loc)
         (carry ?drone ?sample)  
         (at ?drone ?loc)
         (is-recharging-dock ?loc)
@@ -40,7 +40,7 @@
         :effect 
             (and 
                 (at ?drone ?to-loc)
-                (been-at ?drone ?to-loc)
+                ;(been-at ?drone ?to-loc)
                 (not (at ?drone ?from-loc))
                 (decrease (battery-amount ?drone) 8))
     )
@@ -59,6 +59,7 @@
                 (is-in ?sample ?loc)
                 (at ?drone ?loc)
                 (> (battery-amount ?drone) 3)
+                (> (drill-amount ?drone) 0)
             )
 
         :effect 
@@ -66,6 +67,7 @@
                 (not (is-in ?sample ?loc))
                 (carry ?drone ?sample)
                 (decrease (battery-amount ?drone) 3)
+                (decrease (drill-amount ?drone) 1)
                 )
     )
     
@@ -119,13 +121,14 @@
         :precondition
 	        (and
 	            (drone ?drone)  
-	            (= (drill-amount ?drone) 0)
+	            (< (drill-amount ?drone) 1)
                 (> (battery-amount ?drone) 4)
             )
 	            
         :effect
             (and
-                (increase (drill-amount ?drone) (drill-capacity))
+                (increase (drill-amount ?drone) 
+                    (- (drill-capacity) (drill-amount ?drone)))
                 (decrease (battery-amount ?drone) 4)
             )
     )

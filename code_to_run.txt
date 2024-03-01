@@ -1,3 +1,5 @@
 python3 ./downward/fast-downward.py --alias seq-sat-lama-2011 --plan ./Planning_PDDL/test/domain.pddl ./Planning_PDDL/test/problem.pddl
 
 python3 ./downward/fast-downward.py ./Planning_PDDL/test/domain.pddl ./Planning_PDDL/test/problem.pddl --search "lazy_greedy([ff()], preferred=[ff()])"
+
+./ff -p ../Planning_PDDL/case2/ -o domain.pddl -f problem.pddl
