@@ -41,7 +41,6 @@
         (is-dropping-dock loc7)
         
         (drone drone1)
-        (empty drone1)
         (at drone1 loc6)
     )
     
