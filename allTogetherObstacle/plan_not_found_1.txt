@@ -1,0 +1,8 @@
+sample-capacity = 3
+battery-amount-init = 40
+
+ff: plan not found since node 9 create an obstacle and after dropping the sample in node 9 is not possible anymore
+to go into node 1 which is a goal.
+
+
+changing the goal or adding a connection will make the goal feasible.
