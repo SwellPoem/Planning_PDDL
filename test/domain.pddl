@@ -1,46 +1,37 @@
 (define (domain drone-domain)
-    (:requirements :fluents)
-    
-    (:functions
-        (battery-amount ?drone)
-        (battery-capacity)
-    )
     
     (:predicates
-        (adj ?from-loc ?to-loc)                     
+        (adj ?from ?to)                     
         (is-in ?sample ?loc)
         (been-at ?drone ?loc)
         (carry ?drone ?sample)  
         (at ?drone ?loc)
-        (is-recharging-dock ?loc)
         (is-dropping-dock ?loc)
         (stored-sample ?sample)
         (loc ?loc)    
         (sample ?sample) 
-        (drone ?drone)                             
+        (drone ?drone)
     )
     
     (:action move
         :parameters 
             (?drone
-             ?from-loc 
-             ?to-loc)
+             ?from 
+             ?to)
 
         :precondition 
             (and 
                 (drone ?drone)
-                (loc ?from-loc)
-                (loc ?to-loc) 
-                (at ?drone ?from-loc)
-                (adj ?from-loc ?to-loc)
-                (> (battery-amount ?drone) 8))
+                (loc ?from)
+                (loc ?to) 
+                (at ?drone ?from)
+                (adj ?from ?to))
 
         :effect 
             (and 
-                (at ?drone ?to-loc)
-                (been-at ?drone ?to-loc)
-                (not (at ?drone ?from-loc))
-                (decrease (battery-amount ?drone) 8))
+                (at ?drone ?to)
+                (been-at ?drone ?to)
+                (not (at ?drone ?from)))
     )
 
     (:action take-sample
@@ -55,15 +46,12 @@
                 (sample ?sample)
                 (loc ?loc) 
                 (is-in ?sample ?loc)
-                (at ?drone ?loc)
-                (not (stored-sample ?sample))
-                (> (battery-amount ?drone) 3))
+                (at ?drone ?loc))
 
         :effect 
             (and 
                 (not (is-in ?sample ?loc))
-                (carry ?drone ?sample)
-                (decrease (battery-amount ?drone) 3))
+                (carry ?drone ?sample))
     )
     
     (:action drop-sample
@@ -79,32 +67,12 @@
                 (loc ?loc)
                 (is-dropping-dock ?loc)
                 (at ?drone ?loc)
-                (carry ?drone ?sample)
-                (> (battery-amount ?drone) 2))                     
+                (carry ?drone ?sample))                     
                            
         :effect 
             (and 
                 (is-in ?sample ?loc) 
                 (not (carry ?drone ?sample))
-                (stored-sample ?sample)
-                (decrease (battery-amount ?drone) 2))
-    )
-
-    (:action recharge
-        :parameters 
-            (?drone
-             ?loc)
-        
-        :precondition
-	        (and
-	            (drone ?drone)
-	            (loc ?loc)  
-	            (at ?drone ?loc)
-	            (is-recharging-dock ?loc) 
-	            (< (battery-amount ?drone) 20))
-	            
-        :effect
-            (increase (battery-amount ?drone) 
-                (- (battery-capacity) (battery-amount ?drone)))
+                (stored-sample ?sample))
     )
 )

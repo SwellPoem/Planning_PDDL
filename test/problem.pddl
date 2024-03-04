@@ -1,4 +1,4 @@
-(define (problem drone-battery)
+(define (problem drone-1)
 
     (:domain 
         drone-domain    
@@ -15,7 +15,6 @@
     )
     
     (:init
-        (= (battery-capacity) 100)
         
         (loc loc1) (loc loc2) (loc loc3) 
         (loc loc4) (loc loc5) (loc loc6) 
@@ -23,7 +22,6 @@
         
         (sample sample1) (sample sample2) (sample sample3) (sample sample4)
         (sample sample5) (sample sample6)
-        
         
         (adj loc1 loc5) (adj loc1 loc9)
         (adj loc2 loc5) (adj loc3 loc4) 
@@ -40,12 +38,10 @@
         (is-in sample3 loc9) (is-in sample4 loc8)
         (is-in sample5 loc3) (is-in sample6 loc3)   
         
-        (is-recharging-dock loc1)
         (is-dropping-dock loc7)
         
         (drone drone1)
         (at drone1 loc6)
-        (= (battery-amount drone1) 40)
     )
     
     (:goal
@@ -59,7 +55,4 @@
             
             (at drone1 loc1))
     )
-    
-    ;(:metric 
-    ;    minimize (battery-amount))
 )
