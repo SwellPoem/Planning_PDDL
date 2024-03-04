@@ -60,6 +60,6 @@
             (at drone1 loc1))
     )
     
-    ;(:metric 
-    ;    minimize (battery-amount))
+    (:metric 
+        minimize (battery-amount))
 )
