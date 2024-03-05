@@ -11,7 +11,7 @@
         (is-in ?sample ?loc)
         (been-at ?drone ?loc)
         (carry ?drone ?sample)  
-        (at ?drone ?loc)
+        (at-loc ?drone ?loc)
         (is-recharging-dock ?loc)
         (is-dropping-dock ?loc)
         (stored-sample ?sample)
@@ -31,15 +31,15 @@
                 (drone ?drone)
                 (loc ?from-loc)
                 (loc ?to-loc) 
-                (at ?drone ?from-loc)
+                (at-loc ?drone ?from-loc)
                 (adj ?from-loc ?to-loc)
                 (> (battery-amount ?drone) 8))
 
         :effect 
             (and 
-                (at ?drone ?to-loc)
+                (at-loc ?drone ?to-loc)
                 (been-at ?drone ?to-loc)
-                (not (at ?drone ?from-loc))
+                (not (at-loc ?drone ?from-loc))
                 (decrease (battery-amount ?drone) 8))
     )
 
@@ -55,7 +55,7 @@
                 (sample ?sample)
                 (loc ?loc) 
                 (is-in ?sample ?loc)
-                (at ?drone ?loc)
+                (at-loc ?drone ?loc)
                 (not (stored-sample ?sample))
                 (> (battery-amount ?drone) 3))
 
@@ -78,7 +78,7 @@
                 (sample ?sample)
                 (loc ?loc)
                 (is-dropping-dock ?loc)
-                (at ?drone ?loc)
+                (at-loc ?drone ?loc)
                 (carry ?drone ?sample)
                 (> (battery-amount ?drone) 2))                     
                            
@@ -99,7 +99,7 @@
 	        (and
 	            (drone ?drone)
 	            (loc ?loc)  
-	            (at ?drone ?loc)
+	            (at-loc ?drone ?loc)
 	            (is-recharging-dock ?loc) 
 	            (< (battery-amount ?drone) 20))
 	            

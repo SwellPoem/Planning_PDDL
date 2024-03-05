@@ -5,7 +5,7 @@
         (is-in ?sample ?loc)
         (been-at ?drone ?loc)
         (carry ?drone ?sample)  
-        (at ?drone ?loc)
+        (at-loc ?drone ?loc)
         (is-dropping-dock ?loc)
         (stored-sample ?sample)
         (loc ?loc)    
@@ -24,14 +24,14 @@
                 (drone ?drone)
                 (loc ?from)
                 (loc ?to) 
-                (at ?drone ?from)
+                (at-loc ?drone ?from)
                 (adj ?from ?to))
 
         :effect 
             (and 
-                (at ?drone ?to)
+                (at-loc ?drone ?to)
                 (been-at ?drone ?to)
-                (not (at ?drone ?from)))
+                (not (at-loc ?drone ?from)))
     )
 
     (:action take-sample
@@ -46,7 +46,7 @@
                 (sample ?sample)
                 (loc ?loc) 
                 (is-in ?sample ?loc)
-                (at ?drone ?loc))
+                (at-loc ?drone ?loc))
 
         :effect 
             (and 
@@ -66,7 +66,7 @@
                 (sample ?sample)
                 (loc ?loc)
                 (is-dropping-dock ?loc)
-                (at ?drone ?loc)
+                (at-loc ?drone ?loc)
                 (carry ?drone ?sample))                     
                            
         :effect 

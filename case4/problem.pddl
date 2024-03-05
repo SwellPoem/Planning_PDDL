@@ -43,7 +43,7 @@
         (is-dropping-dock loc7)
         
         (drone drone1)
-        (at drone1 loc6)
+        (at-loc drone1 loc6)
         (= (battery-amount drone1) 40) 
         (= (drill-amount drone1) 3)
     )
@@ -57,7 +57,7 @@
             (stored-sample sample5)
             (stored-sample sample6)   
             
-            (at drone1 loc1))
+            (at-loc drone1 loc1))
     )
     
     (:metric 

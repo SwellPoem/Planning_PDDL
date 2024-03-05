@@ -9,3 +9,6 @@ python3 ./downward/fast-downward.py ./Planning_PDDL/test/domain.pddl ./Planning_
 
 
 singularity ../../popf/popf/Singularity ../../panning/Planning_PDDL/case5/domain.pddl ../../panning/Planning_PDDL/case5/problem.pddl ../../panning/Planning_PDDL/case5/plan
+
+
+java -jar ./enhsp-19/nbdist/enhsp-19.jar -o ./Planning_PDDL/test/domain.pddl -f ./Planning_PDDL/test/problem.pddl
