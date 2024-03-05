@@ -1,13 +1,6 @@
 (define (domain drone-domain)
     (:requirements :fluents)
     
-    (:functions
-        (battery-amount ?drone)
-        (sample-amount ?drone)
-        (battery-capacity)
-        (sample-capacity)
-    )
-    
     (:predicates
         (adj ?from-loc ?to-loc)                     
         (is-in ?sample ?loc)
@@ -20,6 +13,13 @@
         (loc ?loc)    
         (sample ?sample) 
         (drone ?drone)                             
+    )
+
+    (:functions
+        (battery-amount ?drone)
+        (sample-amount ?drone)
+        (battery-capacity)
+        (sample-capacity)
     )
     
     (:action move

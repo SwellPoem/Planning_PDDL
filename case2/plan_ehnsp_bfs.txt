@@ -1,0 +1,135 @@
+Heuristic: relaxation heuristic
+Search: greedy bfs
+
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 68
+Aibr Preprocessing
+|F|:42
+|X|:1
+|A|:37
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+Setting horizon to:NaN
+Running Greedy Best First Search
+h(n = s_0)=35.0
+ g(n)= 3.0 h(n)=33.0
+ g(n)= 5.0 h(n)=32.0
+ g(n)= 4.0 h(n)=31.0
+ g(n)= 5.0 h(n)=30.0
+ g(n)= 5.0 h(n)=29.0
+ g(n)= 18.0 h(n)=28.0
+ g(n)= 19.0 h(n)=27.0
+ g(n)= 18.0 h(n)=26.0
+ g(n)= 19.0 h(n)=25.0
+ g(n)= 20.0 h(n)=24.0
+ g(n)= 17.0 h(n)=23.0
+ g(n)= 18.0 h(n)=22.0
+ g(n)= 19.0 h(n)=21.0
+ g(n)= 22.0 h(n)=20.0
+ g(n)= 21.0 h(n)=19.0
+ g(n)= 22.0 h(n)=18.0
+ g(n)= 32.0 h(n)=17.0
+ g(n)= 33.0 h(n)=16.0
+ g(n)= 34.0 h(n)=15.0
+ g(n)= 42.0 h(n)=14.0
+ g(n)= 43.0 h(n)=13.0
+ g(n)= 44.0 h(n)=12.0
+ g(n)= 45.0 h(n)=11.0
+ g(n)= 46.0 h(n)=10.0
+ g(n)= 47.0 h(n)=9.0
+ g(n)= 54.0 h(n)=8.0
+ g(n)= 55.0 h(n)=6.0
+ g(n)= 66.0 h(n)=5.0
+ g(n)= 67.0 h(n)=4.0
+ g(n)= 68.0 h(n)=3.0
+ g(n)= 69.0 h(n)=2.0
+ g(n)= 70.0 h(n)=1.0
+ g(n)= 71.0 h(n)=0.0
+Problem Solved
+
+Found Plan:
+0.0: (move drone1 loc6 loc3)
+1.0: (take-sample drone1 sample5 loc3)
+2.0: (move drone1 loc3 loc4)
+3.0: (move drone1 loc4 loc9)
+4.0: (move drone1 loc9 loc1)
+5.0: (recharge drone1 loc1)
+6.0: (move drone1 loc1 loc9)
+7.0: (move drone1 loc9 loc4)
+8.0: (move drone1 loc4 loc3)
+9.0: (take-sample drone1 sample2 loc3)
+10.0: (take-sample drone1 sample6 loc3)
+11.0: (move drone1 loc3 loc6)
+12.0: (move drone1 loc6 loc7)
+13.0: (drop-sample drone1 sample5 loc7)
+14.0: (drop-sample drone1 sample2 loc7)
+15.0: (move drone1 loc7 loc6)
+16.0: (move drone1 loc6 loc8)
+17.0: (move drone1 loc8 loc4)
+18.0: (move drone1 loc4 loc9)
+19.0: (move drone1 loc9 loc1)
+20.0: (recharge drone1 loc1)
+21.0: (move drone1 loc1 loc9)
+22.0: (move drone1 loc9 loc4)
+23.0: (move drone1 loc4 loc8)
+24.0: (take-sample drone1 sample4 loc8)
+25.0: (move drone1 loc8 loc6)
+26.0: (move drone1 loc6 loc7)
+27.0: (drop-sample drone1 sample4 loc7)
+28.0: (drop-sample drone1 sample6 loc7)
+29.0: (move drone1 loc7 loc6)
+30.0: (move drone1 loc6 loc8)
+31.0: (move drone1 loc8 loc4)
+32.0: (move drone1 loc4 loc9)
+33.0: (take-sample drone1 sample3 loc9)
+34.0: (move drone1 loc9 loc1)
+35.0: (recharge drone1 loc1)
+36.0: (move drone1 loc1 loc9)
+37.0: (move drone1 loc9 loc4)
+38.0: (move drone1 loc4 loc8)
+39.0: (move drone1 loc8 loc6)
+40.0: (move drone1 loc6 loc7)
+41.0: (drop-sample drone1 sample3 loc7)
+42.0: (move drone1 loc7 loc6)
+43.0: (move drone1 loc6 loc8)
+44.0: (move drone1 loc8 loc4)
+45.0: (move drone1 loc4 loc9)
+46.0: (move drone1 loc9 loc1)
+47.0: (recharge drone1 loc1)
+48.0: (move drone1 loc1 loc9)
+49.0: (move drone1 loc9 loc1)
+50.0: (move drone1 loc1 loc5)
+51.0: (move drone1 loc5 loc2)
+52.0: (take-sample drone1 sample1 loc2)
+53.0: (move drone1 loc2 loc5)
+54.0: (move drone1 loc5 loc1)
+55.0: (move drone1 loc1 loc9)
+56.0: (move drone1 loc9 loc4)
+57.0: (move drone1 loc4 loc9)
+58.0: (move drone1 loc9 loc1)
+59.0: (recharge drone1 loc1)
+60.0: (move drone1 loc1 loc9)
+61.0: (move drone1 loc9 loc4)
+62.0: (move drone1 loc4 loc8)
+63.0: (move drone1 loc8 loc6)
+64.0: (move drone1 loc6 loc7)
+65.0: (drop-sample drone1 sample1 loc7)
+66.0: (move drone1 loc7 loc6)
+67.0: (move drone1 loc6 loc8)
+68.0: (move drone1 loc8 loc4)
+69.0: (move drone1 loc4 loc9)
+70.0: (move drone1 loc9 loc1)
+
+Plan-Length:71
+Metric (Search):71.0
+Planning Time (msec): 607
+Heuristic Time (msec): 75
+Search Time (msec): 140
+Expanded Nodes:675
+States Evaluated:1397
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:542
+Number of Duplicates detected:397

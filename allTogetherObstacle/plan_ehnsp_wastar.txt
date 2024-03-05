@@ -1,0 +1,99 @@
+Heuristic: hmax
+Search: WASTART
+
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 121
+Aibr Preprocessing
+|F|:47
+|X|:3
+|A|:39
+|P|:0
+|E|:0
+H1 Setup Time (msec): 12
+Setting horizon to:NaN
+Running WA-STAR
+h(n = s_0)=6.0
+f(n) = 6.0 (Expanded Nodes: 0, Evaluated States: 0, Time: 0.007) Frontier Size: 0
+f(n) = 8.0 (Expanded Nodes: 2, Evaluated States: 5, Time: 0.034) Frontier Size: 3
+f(n) = 9.0 (Expanded Nodes: 16, Evaluated States: 45, Time: 0.051) Frontier Size: 23
+f(n) = 10.0 (Expanded Nodes: 27, Evaluated States: 72, Time: 0.055) Frontier Size: 25
+f(n) = 11.0 (Expanded Nodes: 50, Evaluated States: 132, Time: 0.063) Frontier Size: 32
+f(n) = 12.0 (Expanded Nodes: 91, Evaluated States: 243, Time: 0.075) Frontier Size: 54
+f(n) = 13.0 (Expanded Nodes: 127, Evaluated States: 341, Time: 0.08) Frontier Size: 36
+f(n) = 14.0 (Expanded Nodes: 175, Evaluated States: 448, Time: 0.092) Frontier Size: 93
+f(n) = 15.0 (Expanded Nodes: 206, Evaluated States: 507, Time: 0.096) Frontier Size: 103
+f(n) = 16.0 (Expanded Nodes: 345, Evaluated States: 784, Time: 0.12) Frontier Size: 236
+f(n) = 17.0 (Expanded Nodes: 525, Evaluated States: 1165, Time: 0.185) Frontier Size: 361
+f(n) = 18.0 (Expanded Nodes: 860, Evaluated States: 1837, Time: 0.257) Frontier Size: 583
+f(n) = 19.0 (Expanded Nodes: 1298, Evaluated States: 2766, Time: 0.286) Frontier Size: 830
+f(n) = 20.0 (Expanded Nodes: 2014, Evaluated States: 4210, Time: 0.332) Frontier Size: 1122
+f(n) = 21.0 (Expanded Nodes: 2860, Evaluated States: 5970, Time: 0.423) Frontier Size: 1435
+f(n) = 22.0 (Expanded Nodes: 4033, Evaluated States: 8297, Time: 0.529) Frontier Size: 1546
+f(n) = 23.0 (Expanded Nodes: 5189, Evaluated States: 10667, Time: 0.573) Frontier Size: 1643
+f(n) = 24.0 (Expanded Nodes: 6488, Evaluated States: 13207, Time: 0.653) Frontier Size: 1567
+f(n) = 25.0 (Expanded Nodes: 7796, Evaluated States: 15921, Time: 0.733) Frontier Size: 1331
+f(n) = 26.0 (Expanded Nodes: 8864, Evaluated States: 18029, Time: 0.798) Frontier Size: 1022
+f(n) = 27.0 (Expanded Nodes: 9723, Evaluated States: 19637, Time: 0.831) Frontier Size: 1222
+f(n) = 28.0 (Expanded Nodes: 10625, Evaluated States: 21256, Time: 0.877) Frontier Size: 1399
+f(n) = 29.0 (Expanded Nodes: 11622, Evaluated States: 22967, Time: 0.931) Frontier Size: 1698
+f(n) = 30.0 (Expanded Nodes: 13013, Evaluated States: 25394, Time: 0.978) Frontier Size: 2031
+f(n) = 31.0 (Expanded Nodes: 14403, Evaluated States: 27808, Time: 1.025) Frontier Size: 2293
+f(n) = 32.0 (Expanded Nodes: 16240, Evaluated States: 30903, Time: 1.109) Frontier Size: 2687
+f(n) = 33.0 (Expanded Nodes: 18099, Evaluated States: 34075, Time: 1.171) Frontier Size: 2942
+f(n) = 34.0 (Expanded Nodes: 20399, Evaluated States: 38022, Time: 1.293) Frontier Size: 3166
+f(n) = 35.0 (Expanded Nodes: 22371, Evaluated States: 41275, Time: 1.357) Frontier Size: 3263
+f(n) = 36.0 (Expanded Nodes: 24795, Evaluated States: 44924, Time: 1.4) Frontier Size: 3269
+f(n) = 37.0 (Expanded Nodes: 26797, Evaluated States: 47936, Time: 1.438) Frontier Size: 3123
+Problem Solved
+
+Found Plan:
+0.0: (move drone1 loc6 loc8)
+1.0: (move drone1 loc8 loc4)
+2.0: (move drone1 loc4 loc9)
+3.0: (move drone1 loc9 loc1)
+4.0: (recharge drone1 loc1)
+5.0: (move drone1 loc1 loc9)
+6.0: (move drone1 loc9 loc4)
+7.0: (move drone1 loc4 loc3)
+8.0: (take-sample drone1 sample2 loc3)
+9.0: (take-sample drone1 sample6 loc3)
+10.0: (take-sample drone1 sample5 loc3)
+11.0: (move drone1 loc3 loc6)
+12.0: (move drone1 loc6 loc7)
+13.0: (drop-sample drone1 sample2 loc7)
+14.0: (drop-sample drone1 sample5 loc7)
+15.0: (drop-sample drone1 sample6 loc7)
+16.0: (move drone1 loc7 loc1)
+17.0: (move drone1 loc1 loc9)
+18.0: (changeDrill drone1)
+19.0: (move drone1 loc9 loc1)
+20.0: (recharge drone1 loc1)
+21.0: (move drone1 loc1 loc5)
+22.0: (move drone1 loc5 loc2)
+23.0: (take-sample drone1 sample1 loc2)
+24.0: (move drone1 loc2 loc5)
+25.0: (move drone1 loc5 loc1)
+26.0: (move drone1 loc1 loc9)
+27.0: (take-sample drone1 sample3 loc9)
+28.0: (move drone1 loc9 loc4)
+29.0: (move drone1 loc4 loc8)
+30.0: (take-sample drone1 sample4 loc8)
+31.0: (move drone1 loc8 loc6)
+32.0: (move drone1 loc6 loc7)
+33.0: (drop-sample drone1 sample3 loc7)
+34.0: (drop-sample drone1 sample1 loc7)
+35.0: (drop-sample drone1 sample4 loc7)
+36.0: (move drone1 loc7 loc1)
+
+Plan-Length:37
+Metric (Search):37.0
+Planning Time (msec): 2036
+Heuristic Time (msec): 1004
+Search Time (msec): 1463
+Expanded Nodes:28444
+States Evaluated:50356
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:19186
+Number of Duplicates detected:23703
